@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background: beige;
+    font-family: monospace;
+}
+
+.wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #72a8c3;
+
+    .garage__btn,
+    .winners__btn {
+        width: 150px;
+        height: 40px;
+        color: #ffe4c4;
+        background-color: #466473;
+        text-transform: uppercase;
+        border-radius: 15px;
+        box-shadow: 0 0 0.25rem #000000;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #ac4f49;
+    }
+}
+.main {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.garage-main {
+    display: block;
+    padding: 5px;
+    width: 1200px;
+    height: 100%;
+    background-color: #dde0e1;
+
+    .create-block,
+    .update-block,
+    .control-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        padding: 2px;
+
+        .create-block__input-brand,
+        .update-block__input-brand {
+            width: 50%;
+            height: 30px;
+            border: solid 5px #466473;
+            border-radius: 15px;
+            box-shadow: 0 0 0.25rem #000000;
+            outline: none;
+        }
+        .create-block__input-color,
+        .update-block__input-color {
+            width: 15%;
+            height: 30px;
+            border: solid 5px #466473;
+            border-radius: 15px;
+            box-shadow: 0 0 0.25rem #000000;
+        }
+
+        .create-btn,
+        .update-btn,
+        .control-block__race-btn,
+        .control-block__reset-btn,
+        .control-block__generate-btn {
+            height: 30px;
+            color: #ffe4c4;
+            background-color: #466473;
+            text-transform: uppercase;
+            border-radius: 15px;
+            box-shadow: 0 0 0.25rem #000000;
+            cursor: pointer;
+        }
+    }
+
+    .garage-info {
+        padding: 5px;
+
+        .garage-name {
+            padding: 5px 0;
+            font-size: 30px;
+            color: #ac4f49;
+        }
+
+        .garage-page {
+            padding-bottom: 5px;
+            font-size: 24px;
+            color: #ac4f49;
+        }
+    }
+
+    .car-block {
+        position: relative;
+        border-bottom: dotted 3px #325f3d;
+
+        .btn-block-car,
+        .btn-block-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 145px;
+            padding-bottom: 5px;
+
+            .select-btn,
+            .remove-btn,
+            .move-btn,
+            .stop-btn {
+                height: 20px;
+                color: #ffe4c4;
+                background-color: #325f3d;
+                text-transform: uppercase;
+                border-radius: 15px;
+                box-shadow: 0 0 0.25rem #000000;
+                cursor: pointer;
+            }
+
+            .car-model {
+                position: absolute;
+                left: 160px;
+                font-size: 24px;
+                color: #ac4f49;
+            }
+        }
+
+        .flag {
+            position: absolute;
+            top: 36px;
+            right: 70px;
+        }
+        .car {
+            width: 65px;
+            height: 50px;
+        }
+    }
+}
+
+.page-control {
+    position: absolute;
+    top: 970px;
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+    padding: 9px;
+
+    .btn-next,
+    .btn-prev {
+        height: 30px;
+        width: 80px;
+        color: #ffe4c4;
+        background-color: #466473;
+        text-transform: uppercase;
+        border-radius: 15px;
+        box-shadow: 0 0 0.25rem #000000;
+        cursor: pointer;
+    }
+}
+
+.garage-block-main {
+    height: 771px;
+    padding-bottom: 50px;
+}
+.winners-main {
+    display: none;
+    width: 1200px;
+    height: 981px;
+    padding: 5px;
+    background-color: #dde0e1;
+
+    .winners-info {
+        padding: 5px;
+
+        .winners-name {
+            padding: 5px 0;
+            font-size: 30px;
+            color: #ac4f49;
+        }
+
+        .winners-page {
+            padding-bottom: 5px;
+            font-size: 24px;
+            color: #ac4f49;
+        }
+    }
+    .table-body {
+        width: 640px;
+
+        .table-cap {
+            display: grid;
+            grid-template-columns: repeat(5, 90px 120px 200px 80px 150px);
+            align-items: center;
+            justify-items: center;
+            background-color: #ac4f49;
+
+            .table-cap__number,
+            .table-cap__name,
+            .table-cap__wins,
+            .table-cap__car,
+            .table-cap__time {
+                font-size: 24px;
+            }
+            .table-cap__wins,
+            .table-cap__time {
+                cursor: pointer;
+            }
+        }
+        .table-main {
+            display: grid;
+            grid-template-columns: repeat(5, 90px 120px 200px 80px 150px);
+            align-items: center;
+            justify-items: center;
+            width: 640px;
+
+            .table-main__number,
+            .table-main__name,
+            .table-main__wins,
+            .table-main__time {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.congratulations {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: crimson;
+    font-size: 50px;
+}
+.car {
+    width: 65px;
+    height: 65px;
+}
